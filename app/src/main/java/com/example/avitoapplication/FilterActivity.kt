@@ -2,6 +2,7 @@ package com.example.avitoapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -31,6 +32,7 @@ class FilterActivity : AppCompatActivity() {
         } catch (e: Exception) {
             Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show()
         }
+        findViewById<Button>(R.id.backButton).setOnClickListener { onBackPressed() }
     }
 
     override fun onBackPressed() {
